@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13C1021" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Disease" syncable="YES">
-        <attribute name="id" optional="YES" syncable="YES"/>
-        <attribute name="name" optional="YES" syncable="YES"/>
-        <relationship name="test" optional="YES" maxCount="1" deletionRule="Nullify" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Factors" syncable="YES">
+        <attribute name="alcohol" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="anxiety" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="eating_desordies" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="glaucoma" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="head_injuries" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="hepatic" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="hispanic" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="insomia" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="maoi" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="night_sweats" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="renal_disease" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="seizure" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="id_medication" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medication" syncable="YES"/>
     </entity>
     <entity name="Medication">
         <attribute name="caucasian_dose" optional="YES" attributeType="String" syncable="YES"/>
@@ -17,35 +32,19 @@
         <attribute name="side" optional="YES" attributeType="String" syncable="YES"/>
         <userInfo/>
     </entity>
-    <entity name="Problems" syncable="YES">
-        <attribute name="alcohol" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="anxiety" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="eating_desordies" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="glaucoma" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="head_injuries" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="hepatic" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    <entity name="Ranking" syncable="YES">
+        <attribute name="african" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="asian" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="caucasian" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="hispanic" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="id_medication" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="insomia" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="maoi" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="night_sweats" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="renal_disease" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="seizure" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-    </entity>
-    <entity name="Ranking" syncable="YES">
-        <attribute name="african" optional="YES" syncable="YES"/>
-        <attribute name="asian" optional="YES" syncable="YES"/>
-        <attribute name="caucasian" optional="YES" syncable="YES"/>
-        <attribute name="hispanic" optional="YES" syncable="YES"/>
-        <attribute name="id" optional="YES" syncable="YES"/>
-        <attribute name="id_disease" optional="YES" syncable="YES"/>
-        <attribute name="id_medication" optional="YES" syncable="YES"/>
+        <relationship name="id_disease" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Disease" syncable="YES"/>
+        <relationship name="id_medication" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medication" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Disease" positionX="-4637" positionY="26" width="128" height="73"/>
-        <element name="Medication" positionX="-4437" positionY="99" width="128" height="148"/>
-        <element name="Problems" positionX="-4241" positionY="-172" width="128" height="253"/>
-        <element name="Ranking" positionX="-4466" positionY="-180" width="128" height="148"/>
+        <element name="Disease" positionX="-4637" positionY="-9" width="128" height="73"/>
+        <element name="Medication" positionX="-4475" positionY="180" width="128" height="148"/>
+        <element name="Factors" positionX="-4266" positionY="-189" width="128" height="253"/>
+        <element name="Ranking" positionX="-4493" positionY="-187" width="128" height="148"/>
     </elements>
 </model>
