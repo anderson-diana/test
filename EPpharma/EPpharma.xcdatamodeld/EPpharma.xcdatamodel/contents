@@ -3,6 +3,7 @@
     <entity name="Disease" syncable="YES">
         <attribute name="id" optional="YES" syncable="YES"/>
         <attribute name="name" optional="YES" syncable="YES"/>
+        <relationship name="test" optional="YES" maxCount="1" deletionRule="Nullify" syncable="YES"/>
     </entity>
     <entity name="Medication">
         <attribute name="caucasian_dose" optional="YES" attributeType="String" syncable="YES"/>
@@ -42,9 +43,9 @@
         <attribute name="id_medication" optional="YES" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Disease" positionX="-4637" positionY="26" width="128" height="73"/>
         <element name="Medication" positionX="-4437" positionY="99" width="128" height="148"/>
-        <element name="Ranking" positionX="-4466" positionY="-180" width="128" height="148"/>
         <element name="Problems" positionX="-4241" positionY="-172" width="128" height="253"/>
-        <element name="Disease" positionX="-4644" positionY="-63" width="128" height="73"/>
+        <element name="Ranking" positionX="-4466" positionY="-180" width="128" height="148"/>
     </elements>
 </model>
